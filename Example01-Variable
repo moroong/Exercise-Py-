@@ -1,0 +1,25 @@
+import turtle
+
+turtle.shape('turtle')
+
+# 거북이가 앞으로 이동할 거리
+distance = 100
+
+# 거북이가 왼쪽으로 회전할 거리
+angle = 90
+
+turtle.forward(distance)
+turtle.left(angle)
+
+turtle.forward(distance)
+turtle.left(angle)
+
+turtle.forward(distance)
+turtle.left(angle)
+
+turtle.forward(distance)
+turtle.left(angle)
+
+input() 
+
+#과제 = 자신의 이름과 나이를 변수에 각각 저장하고 출력
