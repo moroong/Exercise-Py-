@@ -1,15 +1,30 @@
-# 사용자로부터 이름과 나이를 입력을 받아
-# 출력하는 프로그램을 작성
+import turtle
+turtle.shape('turtle')
+turtle.speed(1)
 
-name=input(' 이름을 입력하세요>>> ')
-age=input('나이를 입력하세요>>> ')
+# 도형을 그리기 위한 두 변의 길이를 입력
 
-print(f'입력된 이름은 {name} 입니다.')
-print(f'입력된 나이는 {age}세 입니다')
+a, b = map(int, input(' 도형을 그리기 위한 두 변의 길이를 입력하세요. ').split()) # '300 250'
+# a, b = map(int, '300 250'.split()) # '300 250'
+# a, b = map(int, ['300', '250']) # '300 250'
+# a, b - (300, 250) # '300 250'
 
-# print('입력된 이름은 {}입니다.'.format(name))
-# print('입력된 나이는 {}세 입니다.'.format(age))
+angle_1 = int(input(' 도형을 그리기 위한 좌하단 각도를 입력하세요. ')) # '60'
+# angle_1 = int('60')
+# angle_1 = 60
 
-# 10년 뒤의 나이를 출력
-after10 = int(age) + 10
-print(f'10년 뒤의 나이는 {after10}세 입니다.')
+angle_2 = 180 - angle_1
+
+turtle.forward(a)
+turtle.left(angle_1)
+
+turtle.forward(b)
+turtle.left(angle_2)
+
+turtle.forward(a)
+turtle.left(angle_1)
+
+turtle.forward(b)
+turtle.left(angle_2)
+
+input('enter any key to exit')
